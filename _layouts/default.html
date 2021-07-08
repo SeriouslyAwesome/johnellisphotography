@@ -27,11 +27,12 @@
 
       <nav id="main-menu">
         <ul>
-          <li>People</li>
-          <li>Places</li>
-          <li>Animals</li>
-          <li>Things</li>
-          <li>About</li>
+          {% assign sorted_pages = site.html_pages | sort:"position" %}
+          {% for page in sorted_pages %}
+            {% if page.title %}
+              <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
         </ul>
       </nav>
     </header>
