@@ -10,9 +10,15 @@ collections:
     output: true
 email: john@seriouslyawesome.com
 description: The photography of John Ellis. Located near Austin, Texas.
-baseurl: 
-url: 
+baseurl:
+url:
 github_username: SeriouslyAwesome
 theme: minima
 plugins:
-- jekyll-feed
+  - jekyll-feed
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"

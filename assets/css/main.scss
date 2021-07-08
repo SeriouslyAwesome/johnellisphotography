@@ -94,9 +94,12 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+  padding: 0 3%;
+}
+
 header {
   display: flex;
-  padding: 0 3%;
 }
 
 #main-menu {
@@ -113,6 +116,7 @@ header {
 }
 
 .grid {
+  padding: 0;
   list-style: none;
   opacity: 0;
   position: relative;
@@ -124,11 +128,11 @@ header {
 
 .grid-sizer,
 .grid-item {
-  width: 30%;
+  width: 32%;
 }
 
 .gutter-sizer {
-  width: 3%;
+  width: 2%;
 }
 
 .grid-item {
@@ -143,7 +147,6 @@ header {
 
 footer {
   text-align: right;
-  padding: 0 3%;
   color: #aaaaaa;
   line-height: 2;
 }
