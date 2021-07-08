@@ -2,6 +2,9 @@
 title: John Ellis Photography
 timezone: America/Chicago
 collections:
+  people:
+    title: People
+    output: true
   posts:
     title: Posts
     output: true
