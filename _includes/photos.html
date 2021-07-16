@@ -1,0 +1,10 @@
+<ul class="grid">
+	<div class="grid-sizer"></div>
+	<div class="gutter-sizer"></div>
+
+	{% for photo in include.photos %}
+		<li class="grid-item">
+			<img src="{{ photo }}" alt="some thing" />
+		</li>
+	{% endfor %}
+</ul>

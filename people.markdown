@@ -14,4 +14,6 @@ photos:
 - "/uploads/2014-08-26648.jpg"
 ---
 
-ok
+{% if page.photos %}
+  {% include photos.html photos=page.photos %}
+{% endif %}

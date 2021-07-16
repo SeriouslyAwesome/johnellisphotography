@@ -5,3 +5,6 @@ permalink: "/animals/"
 position: 3
 ---
 
+{% if page.photos %}
+  {% include photos.html photos=page.photos %}
+{% endif %}

@@ -5,4 +5,6 @@ permalink: "/places/"
 position: 1
 ---
 
-ok
+{% if page.photos %}
+  {% include photos.html photos=page.photos %}
+{% endif %}
