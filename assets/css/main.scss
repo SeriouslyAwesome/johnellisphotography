@@ -90,9 +90,23 @@ textarea {
   resize: vertical;
 }
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.25s opacity ease-in-out;
+  -moz-transition: 0.25s opacity ease-in-out;
+  -o-transition: 0.25s opacity ease-in-out;
+  transition: 0.25s opacity ease-in-out;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
 
 body {
   padding: 0 3%;
@@ -100,6 +114,11 @@ body {
 
 header {
   display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
 }
 
 #main-menu {
@@ -120,6 +139,7 @@ header {
   list-style: none;
   opacity: 0;
   position: relative;
+  top: 5.5em;
   -webkit-transition: 0.25s opacity ease-in-out;
   -moz-transition: 0.25s opacity ease-in-out;
   -o-transition: 0.25s opacity ease-in-out;
@@ -143,6 +163,43 @@ header {
 
 .grid-item img {
   max-width: 100%;
+}
+
+.button-enlarge-photo {
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+#enlarged-image {
+  position: fixed;
+  top: 5.5em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1000;
+  padding: 2em;
+  opacity: 1;
+  transition: opacity 400ms;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  .lds-spinner {
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    left: 50%;
+    margin-left: -40px;
+  }
 }
 
 footer {

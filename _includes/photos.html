@@ -4,7 +4,7 @@
 
 	{% for photo in include.photos %}
 		<li class="grid-item">
-			<img src="{{ photo }}" alt="some thing" />
+			<button class="button-enlarge-photo" data-src="{{ photo }}"><img src="{{ photo }}" alt="some thing" title="Click to enlarge" /></button>
 		</li>
 	{% endfor %}
 </ul>
