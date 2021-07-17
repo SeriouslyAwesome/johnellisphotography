@@ -28,7 +28,13 @@ window.Gallery = {
 
   // ENLARGEMENT BUTTONS
   buttons: document.querySelectorAll(".button-enlarge-photo"),
+
   enlargePhoto: function(button) {
+    var windowSize = window.innerWidth;
+    if (windowSize < 768) {
+      return; // Don't bother with enlarging on mobile devices.
+    }
+
     var body = document.querySelector("body");
     var container = this.enlargedImageContainer;
     var existingImage = container.querySelector("img");
@@ -50,9 +56,8 @@ window.Gallery = {
     container.classList.remove("hide");
     body.classList.add("no-scroll");
   },
-  initButtons: function() {
-    console.log(this.buttons);
 
+  initButtons: function() {
     forEach(this.buttons, function(index, button) {
       button.addEventListener("click", function(e) {
         Gallery.enlargePhoto(button);
