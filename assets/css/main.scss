@@ -122,16 +122,37 @@ header {
 }
 
 #main-menu {
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 0.75rem;
+    line-height: 3.5em;
+  }
+
+  a {
+    color: #999;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &.active {
+      color: #000;
+    }
+  }
 }
 
-#main-menu ul {
-  display: flex;
-  list-style: none;
-}
+main {
+  position: relative;
+  top: 5.5em;
 
-#main-menu li {
-  margin: 0 0.75rem;
-  line-height: 3.5em;
+  p {
+    max-width: 40em;
+    color: #666;
+  }
 }
 
 .grid {
@@ -139,7 +160,6 @@ header {
   list-style: none;
   opacity: 0;
   position: relative;
-  top: 5.5em;
   -webkit-transition: 0.25s opacity ease-in-out;
   -moz-transition: 0.25s opacity ease-in-out;
   -o-transition: 0.25s opacity ease-in-out;
