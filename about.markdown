@@ -5,15 +5,6 @@ position: 4
 layout: default
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+I studied commercial photography and graphic design at what is now Miami Ad School at Portfolio Center in Atlanta. In college, I worked as a photo assistant to photographers such as Jerry Burns, and Zach Wolfe. After graduating in 2009, I became Jay Maisel’s studio manager, making prints, managing the archives, and tending to the 35,000 square-foot former bank building that served as his home, studio, and gallery.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Between 2013 and 2019, I lived on the road, traveling around the United States in an Airstream trailer with my wife, two dogs, and a cat, photographing whatever the hell I wanted. I now live in Texas.
