@@ -25,6 +25,8 @@
       <h1>John Ellis</h1>
 
       <nav id="main-menu">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
         <ul>
           {% assign sorted_pages = site.html_pages | sort:"position" %}
           {% for site_page in sorted_pages %}

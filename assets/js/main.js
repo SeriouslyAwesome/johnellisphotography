@@ -30,8 +30,7 @@ window.Gallery = {
   buttons: document.querySelectorAll(".button-enlarge-photo"),
 
   enlargePhoto: function(button) {
-    var windowSize = window.innerWidth;
-    if (windowSize < 768) {
+    if (window.innerWidth < 768) {
       return; // Don't bother with enlarging on mobile devices.
     }
 
