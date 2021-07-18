@@ -2,6 +2,7 @@
 ---
 
 @import "normalize";
+@import "loading-spinner";
 
 /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
@@ -106,6 +107,14 @@ textarea {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.lds-spinner {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  left: 50%;
+  margin-left: -40px;
 }
 
 body {

@@ -9,9 +9,46 @@ var forEach = function (array, callback, scope) {
 
 // IMAGE ENLARGEMENT
 
+
+
 window.Gallery = {
   // MASONRY PREP
   list: document.querySelector(".grid"),
+  initGallery: function() {
+    var images = document.querySelectorAll(".grid img");
+    // Images loaded is zero because we're going to process a new set of images.
+    var imagesLoaded = 0;
+    // Total images is still the total number of <img> elements on the page.
+    var totalImages = images.length;
+
+    // Step through each image in the DOM, clone it, attach an onload event
+    // listener, then set its source to the source of the original image. When
+    // that new image has loaded, fire the imageLoaded() callback.
+    forEach(images, function(index, image) {
+      // img is a generic <img> element that is not rendered to the DOM.
+      var newImg = document.createElement("img");
+
+      // When the image is loaded, call imageLoaded() function.
+      newImg.addEventListener("load", imageLoaded());
+
+      // Set the source of the new image to match that of the <img> element that has
+      // been rendered to the DOM.
+      newImg.src = image.src;
+    });
+
+    // Do exactly as we had before -- increment the loaded count and if all are
+    // loaded, call the allImagesLoaded() function.
+    function imageLoaded() {
+      imagesLoaded++
+      if (imagesLoaded == totalImages) {
+        allImagesLoaded()
+      }
+    }
+
+    function allImagesLoaded() {
+      Gallery.initMasonry();
+    }
+  },
   initMasonry: function() {
     this.grid = new Masonry(this.list, {
       stamp: "header",
@@ -21,6 +58,8 @@ window.Gallery = {
       itemSelector: ".grid-item",
       percentPosition: true,
     });
+
+    document.querySelector(".lds-spinner").classList.add("hide");
   },
 
   // ENLARGEMENT AREA
@@ -66,7 +105,7 @@ window.Gallery = {
 
   // PUT IT ALL TOGETHER
   init: function() {
-    this.initMasonry();
+    this.initGallery();
     this.initButtons();
   }
 }
