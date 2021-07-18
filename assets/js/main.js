@@ -12,7 +12,9 @@ window.Gallery = {
   list: document.querySelector(".grid"),
 
   initGallery: function() {
-    imagesLoaded(this.list, this.initMasonry())
+    imagesLoaded(this.list, function() {
+      Gallery.initMasonry();
+    })
   },
 
   initMasonry: function() {
