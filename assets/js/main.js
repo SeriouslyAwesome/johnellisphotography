@@ -12,28 +12,7 @@ window.Gallery = {
   list: document.querySelector(".grid"),
 
   initGallery: function() {
-    var images = document.querySelectorAll(".grid img");
-    var imagesLoaded = 0;
-    var totalImages = images.length;
-
-    forEach(images, function(index, image) {
-      if(image.complete && image.naturalHeight !== 0) {
-        imageLoaded()
-      } else {
-        image.addEventListener("load", imageLoaded(), false);
-      }
-    });
-
-    function imageLoaded() {
-      imagesLoaded++
-      if (imagesLoaded == totalImages) {
-        allImagesLoaded()
-      }
-    }
-
-    function allImagesLoaded() {
-      Gallery.initMasonry();
-    }
+    imagesLoaded(this.list, this.initMasonry())
   },
 
   initMasonry: function() {
