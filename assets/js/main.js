@@ -17,10 +17,11 @@ window.Gallery = {
     var totalImages = images.length;
 
     forEach(images, function(index, image) {
-      var newImg = document.createElement("img");
-
-      newImg.addEventListener("load", imageLoaded());
-      newImg.src = image.src;
+      if(image.complete && image.naturalHeight !== 0) {
+        imageLoaded()
+      } else {
+        image.addEventListener("load", imageLoaded(), false);
+      }
     });
 
     function imageLoaded() {
